@@ -1,6 +1,6 @@
 ﻿using API.Model;
 
-namespace API.Interface
+namespace API.Interface.Service
 {
     public interface ICEPService
     {

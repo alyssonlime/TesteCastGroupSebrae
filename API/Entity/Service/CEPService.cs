@@ -1,10 +1,10 @@
-﻿using API.Interface;
+﻿using API.Interface.Service;
 using API.Model;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Net;
 
-namespace API.Service
+namespace API.Entity.Service
 {
     public class CEPService : ICEPService
     {

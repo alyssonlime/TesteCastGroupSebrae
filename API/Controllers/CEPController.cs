@@ -1,4 +1,4 @@
-using API.Interface;
+using API.Interface.Service;
 using API.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;

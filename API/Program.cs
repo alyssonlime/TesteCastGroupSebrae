@@ -1,8 +1,4 @@
 using API;
-using API.Interface;
-using API.Repository;
-using API.Service;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

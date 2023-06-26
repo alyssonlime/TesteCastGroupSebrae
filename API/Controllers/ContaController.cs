@@ -31,10 +31,6 @@ namespace API.Controllers
 
                 return Ok(conta);
             }
-            catch (HttpRequestException ex)
-            {
-                return StatusCode((int)ex.StatusCode, ex.Message);
-            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
@@ -50,10 +46,6 @@ namespace API.Controllers
                 var listaContas = await _contaService.ObterTodosAsync();
 
                 return Ok(listaContas);
-            }
-            catch (HttpRequestException ex)
-            {
-                return StatusCode((int)ex.StatusCode, ex.Message);
             }
             catch (Exception ex)
             {
@@ -71,10 +63,6 @@ namespace API.Controllers
 
                 return Ok(conta);
             }
-            catch (HttpRequestException ex)
-            {
-                return StatusCode((int)ex.StatusCode, ex.Message);
-            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
@@ -91,10 +79,6 @@ namespace API.Controllers
 
                 return Ok(conta);
             }
-            catch (HttpRequestException ex)
-            {
-                return StatusCode((int)ex.StatusCode, ex.Message);
-            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
@@ -110,10 +94,6 @@ namespace API.Controllers
                 await _contaService.ExcluirAsync(id);
 
                 return Ok();
-            }
-            catch (HttpRequestException ex)
-            {
-                return StatusCode((int)ex.StatusCode, ex.Message);
             }
             catch (Exception ex)
             {

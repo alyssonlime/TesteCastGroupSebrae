@@ -10,7 +10,7 @@
         <a class="btn btn-primary" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="0">Adicionar</a>
     </div>
 
-    <table class="table table-striped table-hover max-width">
+    <table class="table table-striped table-hover max-width left">
         <thead>
             <tr>
                 <th>
@@ -18,6 +18,9 @@
                 </th>
                 <th>
                     Nome
+                </th>
+                <th>
+                    Descrição
                 </th>
                 <th>
                 </th>
@@ -33,9 +36,12 @@
                     <td>
                         @Html.DisplayFor(modelItem =>item.Nome)
                     </td>
+                    <td>
+                        @Html.DisplayFor(modelItem =>item.Descricao)
+                    </td>
                     <td class="right">
-                        <a class="btn btn-primary" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="@item.ID">Atualizar</a> |
-                        <a class="btn btn-danger" asp-controller="Conta" asp-action="Excluir" asp-route-id="@item.ID">Excluir</a>
+                        <a class="btn btn-sm btn-primary" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="@item.ID">Atualizar</a> |
+                        <a class="btn btn-sm btn-danger" asp-controller="Conta" asp-action="Excluir" asp-route-id="@item.ID">Excluir</a>
                     </td>
                 </tr>
             }

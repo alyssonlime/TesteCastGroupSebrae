@@ -1,0 +1,57 @@
+﻿@model WEB.Entity.Conta;
+@{
+    ViewData["Title"] = "Conta";
+}
+
+<div class="text-center">
+    @if (Model.ID == 0)
+    {
+        <h1 class="display-4">Nova Conta</h1>
+    }
+    else
+    {
+        <h1 class="display-4">Atualizar Conta</h1>
+    }
+    <div class="right">
+        <a class="btn btn-success" asp-controller="Conta" asp-action="Index">Voltar para Contas</a>
+    </div>
+
+    <form method="post" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="">
+        <table class="max-width">
+            <tbody>
+                <tr>
+                    <td class="right">
+                        ID:
+                    </td>
+                    <td class="left">
+                        <input type="text" asp-for="ID" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                        Nome:
+                    </td>
+                    <td class="max-width">
+                        <input type="text" asp-for="Nome" class="max-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                        Descrição:
+                    </td>
+                    <td class="max-width">
+                        <input type="text" asp-for="Descricao" class="max-width">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td class="right">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>

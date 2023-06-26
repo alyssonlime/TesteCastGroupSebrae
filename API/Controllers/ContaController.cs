@@ -62,7 +62,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("/{id}")]
+        [Route("{id}")]
         public async Task<ActionResult<ViaCepEndereco>> ObterAsync([FromRoute] int id)
         {
             try
@@ -102,7 +102,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-        [Route("/{id}")]
+        [Route("{id}")]
         public async Task<ActionResult<ViaCepEndereco>> ExcluirAsync([FromRoute] int id)
         {
             try

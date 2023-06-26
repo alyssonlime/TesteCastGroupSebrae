@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WEB.Entity.Conta>;
+@{
+    ViewData["Title"] = "Contas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contas</h1>
+
+    <div class="right">
+        <a class="btn btn-primary" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="0">Adicionar</a>
+    </div>
+
+    <table class="table table-striped table-hover max-width">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem =>item.Nome)
+                    </td>
+                    <td class="right">
+                        <a class="btn btn-primary" asp-controller="Conta" asp-action="AdicionarAtualizar" asp-route-id="@item.ID">Atualizar</a> |
+                        <a class="btn btn-danger" asp-controller="Conta" asp-action="Excluir" asp-route-id="@item.ID">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

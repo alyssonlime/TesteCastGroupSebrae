@@ -16,3 +16,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.max-width {
+    width: 100%;
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+
+.btn-info{
+    color: white !important;
+}
